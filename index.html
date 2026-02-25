@@ -5,170 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KJadeHome | OEM Home Decor & Pet Products Manufacturer</title>
   <meta name="description" content="OEM manufacturer of ceramic decor, glass decor, and pet beds. Private label, quality control, and export services to the US, Europe, Australia, and ASEAN.">
-
+  
   <style>
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:#333; }
-
-    .header {
-      background:#0B1F3A;
-      color:#fff;
-      padding:80px 20px;
-      text-align:center;
-    }
-
-    .header h1 { font-size:40px; margin-bottom:20px; }
-    .header p { font-size:18px; margin-bottom:30px; }
-
-    .btn {
-      background:#C9A86A;
-      color:#fff;
-      padding:12px 25px;
-      text-decoration:none;
-      border-radius:5px;
-      display:inline-block;
-      margin:5px;
-    }
-
-    .trust {
-      background:#f2f2f2;
-      padding:12px;
-      text-align:center;
-      font-size:14px;
-      color:#555;
-    }
-
-    .section {
-      padding:60px 20px;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:30px;
-    }
-
-    .card {
-      border:1px solid #eee;
-      border-radius:8px;
-      overflow:hidden;
-      text-align:center;
-    }
-
-    .card img {
-      width:100%;
-      height:220px;
-      object-fit:cover;
-    }
-
-    .card-content {
-      padding:20px;
-    }
-
-    .footer {
-      background:#0B1F3A;
-      color:#fff;
-      text-align:center;
-      padding:30px;
-      margin-top:40px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 30px;
-    }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #333; }
+    .header { background: #0B1F3A; color: #fff; padding: 80px 20px; text-align: center; }
+    .header h1 { font-size: 40px; margin-bottom: 20px; }
+    .header p { font-size: 18px; margin-bottom: 30px; }
+    .btn { background: #C9A86A; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 5px; }
+    .trust-bar { background-color: #f5f7fa; padding: 12px 20px; text-align: center; font-size: 14px; color: #333; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+    .trust-bar p { margin: 0; }
+    .product-details { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-align: center; }
+    .card img { width: 100%; height: 220px; object-fit: cover; }
+    .card-content { padding: 20px; }
+    .footer { background: #0B1F3A; color: #fff; text-align: center; padding: 30px; margin-top: 40px; }
+    .why-item { margin-bottom: 20px; }
+    .btn-outline { border: 2px solid #c9a86a; color: #c9a86a; background: transparent; }
+    .btn-outline:hover { background: #c9a86a; color: #fff; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <div class="header">
   <h1>OEM Home Decor & Pet Products Manufacturer</h1>
   <p>Private Label • Quality Control • Stable Supply Chain</p>
 
-  <!-- Hero buttons (View Products and Request a Quote) -->
   <div class="hero-buttons">
-    <a href="products.html" class="btn btn-primary">View Products</a>
+    <a href="products.html" class="btn">View Products</a>
     <a href="mailto:bonnie@kjadehome.com" class="btn btn-outline">Request a Quote</a>
+    <a href="catalog.pdf" class="btn btn-outline">Download Catalog</a>
   </div>
 </div>
 
 <!-- TRUST BAR -->
-<div class="trust">
-  Exporting to the US • Europe • Australia • ASEAN | OEM / Private Label | QA | On-Time Shipping
+<div class="trust-bar">
+  <p>
+    ✔ Low MOQ for Private Label &nbsp; | &nbsp;
+    ✔ 7–10 Day Sampling &nbsp; | &nbsp;
+    ✔ AQL Standard QC Inspection &nbsp; | &nbsp;
+    ✔ On-Time Global Shipping &nbsp; | &nbsp;
+    ✔ Factory Audited Supplier
+  </p>
 </div>
 
 <!-- PRODUCT CATEGORIES -->
-<div class="section">
-
+<div class="product-details">
   <h2 style="text-align:center;">Product Categories</h2>
-
   <div class="grid">
-
-    <!-- CERAMIC -->
+    <!-- Ceramic Decor -->
     <div class="card">
       <img src="images/ceramicmeancup.jpg" alt="Ceramic Decor">
       <div class="card-content">
         <h3>Ceramic Decor</h3>
         <p>Custom ceramic home decor with private label and packaging solutions.</p>
-        <a href="ceramic-decor.html" class="btn btn-secondary">View Ceramic Decor</a>
+        <a href="ceramic-decor.html" class="btn">View Ceramic Decor</a>
       </div>
     </div>
-
-    <!-- GLASS -->
+    <!-- Glass Decor -->
     <div class="card">
       <img src="images/glass.jpg" alt="Glass Decor">
       <div class="card-content">
         <h3>Glass Decor</h3>
         <p>Modern glass decorations for retail chains and wholesalers.</p>
-        <a href="glass-decor.html" class="btn btn-secondary">View Glass Decor</a>
+        <a href="glass-decor.html" class="btn">View Glass Decor</a>
       </div>
     </div>
-
-    <!-- PET BED -->
+    <!-- Pet Beds -->
     <div class="card">
       <img src="images/petbed.jpg" alt="Pet Bed">
       <div class="card-content">
         <h3>Pet Beds</h3>
         <p>Comfortable and stylish pet beds with OEM and branding support.</p>
-        <a href="pet-bed.html" class="btn btn-secondary">View Pet Beds</a>
+        <a href="pet-bed.html" class="btn">View Pet Beds</a>
       </div>
     </div>
-
   </div>
 </div>
 
 <!-- WHY CHOOSE US -->
-<div class="section">
-
+<div class="product-details">
   <h2 style="text-align:center;">Why Choose Us</h2>
-
   <div class="grid">
-
-    <div class="card-content">
+    <div class="why-item">
       <h3>OEM Expertise</h3>
-      <p>Strong development and sampling capability.</p>
+      <p>In-house sampling team | 7–10 day sample lead time</p>
     </div>
-
-    <div class="card-content">
+    <div class="why-item">
       <h3>Quality Assurance</h3>
-      <p>Strict QC process before shipment.</p>
+      <p>Pre-shipment inspection | AQL quality standard</p>
     </div>
-
-    <div class="card-content">
+    <div class="why-item">
       <h3>Export Experience</h3>
-      <p>Serving global clients across US, EU, AU, and ASEAN.</p>
+      <p>10+ years serving US & EU retailers</p>
     </div>
-
   </div>
 </div>
 
-<!-- CTA -->
-<div class="section" style="text-align:center;">
+<!-- START YOUR OEM PROJECT -->
+<div class="product-details" style="text-align:center;">
   <h2>Start Your OEM Project</h2>
   <p>Contact us today to get a quotation within 24 hours.</p>
   <a href="mailto:bonnie@kjadehome.com" class="btn">Request a Quote</a>
