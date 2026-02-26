@@ -1,60 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | KJadeHome</title>
-<style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;}
-.header{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
-.section{padding:60px 20px;max-width:1200px;margin:auto;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
-.card{border:1px solid #eee;padding:30px;border-radius:8px;text-align:center;}
-.btn{display:inline-block;margin-top:15px;background:#C9A86A;color:#fff;padding:10px 20px;text-decoration:none;border-radius:5px;}
-.footer{background:#0B1F3A;color:#fff;text-align:center;padding:30px;margin-top:40px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | KJadeHome OEM Manufacturer</title>
+  <meta name="description" content="Explore our ceramic decor, glass decor, and pet beds. OEM manufacturer with strong development capability, strict QC, and global export experience.">
+
+  <style>
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #333; }
+
+    .header {
+      background: #0B1F3A;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .header h1 { font-size: 40px; margin-bottom: 20px; }
+    .header p { font-size: 18px; max-width: 700px; margin: auto; }
+
+    .section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+      background: #fff;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .card-content h3 { margin-bottom: 15px; }
+
+    .btn {
+      display: inline-block;
+      background: #C9A86A;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .trust {
+      background: #F8F8F8;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .trust h2 { margin-bottom: 20px; }
+
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: #0B1F3A;
+      color: #fff;
+    }
+
+    .cta a {
+      margin: 10px;
+    }
+
+    .footer {
+      background: #0B1F3A;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="header">
-<h1>Product Categories</h1>
-<p>OEM Manufacturing • Private Label • Global Export</p>
-</div>
+  <!-- Header -->
+  <div class="header">
+    <h1>Our Products</h1>
+    <p>OEM Home Decor Manufacturer | Ceramic, Glass & Pet Beds</p>
+  </div>
 
-<div class="section">
-<div class="grid">
+  <!-- Product Categories -->
+  <div class="section">
+    <div class="grid">
 
-<div class="card">
-<h2>Ceramic Decor</h2>
-<p>Modern and functional ceramic home decorations with OEM customization, packaging solutions, and stable mass production.</p>
-<a class="btn" href="mailto:bonnie@kjadehome.com">Request Catalog</a>
-</div>
+      <!-- Ceramic -->
+      <div class="card">
+        <img src="https://kjadehome.github.io/images/ceramicmeancup.jpg" alt="Ceramic Decor">
+        <div class="card-content">
+          <h3>Ceramic Decor</h3>
+          <p>Custom ceramic decor with flexible design and packaging solutions.</p>
+          <a href="ceramic-decor.html" class="btn">View Products</a>
+        </div>
+      </div>
 
-<div class="card">
-<h2>Glass Decor</h2>
-<p>High-quality glass decorative items designed for European and US markets, supporting private label and custom design.</p>
-<a class="btn" href="mailto:bonnie@kjadehome.com">Request Quote</a>
-</div>
+      <!-- Glass -->
+      <div class="card">
+        <img src="https://kjadehome.github.io/images/glass.jpg" alt="Glass Decor">
+        <div class="card-content">
+          <h3>Glass Decor</h3>
+          <p>Elegant glass decor for modern living and seasonal collections.</p>
+          <a href="glass-decor.html" class="btn">View Products</a>
+        </div>
+      </div>
 
-<div class="card">
-<h2>Pet Beds</h2>
-<p>Comfortable and durable pet beds with material customization, logo branding, and bulk order support.</p>
-<a class="btn" href="mailto:bonnie@kjadehome.com">OEM Inquiry</a>
-</div>
+      <!-- Pet Bed -->
+      <div class="card">
+        <img src="https://kjadehome.github.io/images/petbed.jpg" alt="Pet Bed">
+        <div class="card-content">
+          <h3>Pet Beds</h3>
+          <p>Comfortable and stylish pet beds with OEM customization support.</p>
+          <a href="petbed.html" class="btn">View Products</a>
+        </div>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 
-<div class="section" style="text-align:center;">
-<h2>Need Custom Products?</h2>
-<p>Send us your design or idea. We support sampling, production, QA, and shipping.</p>
-<a class="btn" href="mailto:bonnie@kjadehome.com">Start Your OEM Project</a>
-</div>
+  <!-- OEM Strength Section -->
+  <div class="section">
+    <div class="trust">
+      <h2>Why Choose KJadeHome</h2>
+      <p><strong>OEM Expertise:</strong> Strong development and sampling capability.</p>
+      <p><strong>Quality Assurance:</strong> Strict QC process before shipment.</p>
+      <p><strong>Export Experience:</strong> Serving clients across US, EU, AU and ASEAN.</p>
+    </div>
+  </div>
 
-<div class="footer">
-<p>© 2026 KJadeHome. All rights reserved.</p>
-</div>
+  <!-- CTA Section -->
+  <div class="cta">
+    <h2>Start Your OEM Project Today</h2>
+    <p>Get a quote within 24 hours</p>
+    <a href="mailto:bonnie@kjadehome.com" class="btn">Request a Quote</a>
+    <a href="https://kjadehome.github.io/catalog.pdf" class="btn">Download Catalog</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2026 KJadeHome. All rights reserved.</p>
+  </div>
 
 </body>
 </html>
