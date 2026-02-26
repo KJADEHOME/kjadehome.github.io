@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote | KJadeHome</title>
+<meta name="description" content="Send us your OEM inquiry for ceramic decor, glass decor, and pet beds. Get a quotation within 24 hours.">
+
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;}
+
+.header{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
+.header h1{font-size:36px;margin-bottom:10px;}
+.header p{font-size:18px;}
+
+.section{max-width:800px;margin:50px auto;padding:20px;}
+
+form{display:grid;gap:15px;}
+
+input, textarea, select{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+width:100%;
+}
+
+button{
+background:#C9A86A;
+color:#fff;
+padding:14px;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{opacity:0.9;}
+
+.footer{background:#0B1F3A;color:#fff;text-align:center;padding:30px;margin-top:40px;}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1>Request a Quote</h1>
+<p>Fill in the form below. We will reply within 24 hours.</p>
+</div>
+
+<div class="section">
+
+<form action="https://formsubmit.co/bonnie@kjadehome.com" method="POST">
+
+<input type="hidden" name="_subject" value="New OEM Inquiry - KJadeHome">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+<label>Your Name*</label>
+<input type="text" name="name" required>
+
+<label>Company Name*</label>
+<input type="text" name="company" required>
+
+<label>Email*</label>
+<input type="email" name="email" required>
+
+<label>Country / Market</label>
+<input type="text" name="country">
+
+<label>Product Category</label>
+<select name="product">
+<option>Ceramic Decor</option>
+<option>Glass Decor</option>
+<option>Pet Bed</option>
+<option>Custom Product</option>
+</select>
+
+<label>MOQ</label>
+<input type="text" name="moq">
+
+<label>Target Price</label>
+<input type="text" name="price">
+
+<label>Message / Product Details*</label>
+<textarea name="message" rows="6" required></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+</div>
+
+<div class="footer">
+<p>© 2026 KJadeHome. All rights reserved.</p>
+</div>
+
+</body>
+</html>
