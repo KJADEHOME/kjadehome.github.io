@@ -3,96 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request a Quote | KJadeHome</title>
-<meta name="description" content="Send us your OEM inquiry for ceramic decor, glass decor, and pet beds. Get a quotation within 24 hours.">
-
+<title>Request a Quote | OEM Manufacturing Inquiry | KJadeHome</title>
+<meta name="description" content="Request wholesale pricing for custom home decor and pet products. MOQ 100pcs. Get quote within 24 hours.">
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;}
-
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;}
 .header{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
-.header h1{font-size:36px;margin-bottom:10px;}
-.header p{font-size:18px;}
-
-.section{max-width:800px;margin:50px auto;padding:20px;}
-
-form{display:grid;gap:15px;}
-
-input, textarea, select{
-padding:12px;
-border:1px solid #ccc;
-border-radius:5px;
-font-size:14px;
-width:100%;
+.header h1{font-size:32px;margin-bottom:10px;}
+.header p{font-size:16px;opacity:0.9;}
+.breadcrumb{background:#f8f9fa;padding:15px 20px;font-size:14px;color:#666;}
+.breadcrumb a{color:#0B1F3A;text-decoration:none;}
+.section{padding:50px 20px;max-width:800px;margin:auto;}
+.section h2{color:#0B1F3A;margin-bottom:20px;font-size:24px;}
+.form-container{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:40px;box-shadow:0 4px 6px rgba(0,0,0,0.05);}
+.form-group{margin-bottom:25px;}
+.form-group label{display:block;margin-bottom:8px;font-weight:bold;color:#0B1F3A;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:4px;font-size:15px;box-sizing:border-box;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#C9A86A;outline:none;}
+.form-group textarea{min-height:120px;resize:vertical;}
+.required{color:#e53e3e;}
+.hint{font-size:13px;color:#666;margin-top:5px;}
+.checkbox-group{display:flex;flex-wrap:wrap;gap:15px;margin-top:10px;}
+.checkbox-group label{display:flex;align-items:center;gap:8px;font-weight:normal;cursor:pointer;}
+.btn-submit{width:100%;padding:16px;background:#C9A86A;color:#fff;border:none;border-radius:5px;font-size:18px;font-weight:bold;cursor:pointer;}
+.btn-submit:hover{background:#b8965a;}
+.trust-badges{display:flex;justify-content:center;gap:30px;margin-top:30px;padding-top:30px;border-top:1px solid #e2e8f0;}
+.trust-badges div{text-align:center;color:#666;font-size:14px;}
+.sidebar{display:none;}
+@media(min-width:1000px){
+.container{display:grid;grid-template-columns:1fr 300px;gap:40px;max-width:1200px;margin:auto;}
+.sidebar{display:block;background:#f8f9fa;padding:30px;border-radius:8px;height:fit-content;}
+.sidebar h3{color:#0B1F3A;margin-bottom:15px;font-size:18px;}
+.sidebar ul{padding-left:20px;}
+.sidebar li{margin-bottom:10px;color:#555;}
 }
-
-button{
-background:#C9A86A;
-color:#fff;
-padding:14px;
-border:none;
-border-radius:5px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{opacity:0.9;}
-
 .footer{background:#0B1F3A;color:#fff;text-align:center;padding:30px;margin-top:40px;}
+.footer a{color:#C9A86A;}
 </style>
 </head>
-
 <body>
 
 <div class="header">
 <h1>Request a Quote</h1>
-<p>Fill in the form below. We will reply within 24 hours.</p>
+<p>Tell us what you need. We'll respond within 24 hours.</p>
 </div>
 
-<div class="section">
+<div class="breadcrumb">
+<a href="index.html">Home</a> > <a href="products.html">Products</a> > Request Quote
+</div>
 
-<form action="https://formsubmit.co/bonnie@kjadehome.com" method="POST">
+<div class="container" style="padding:40px 20px;">
 
-<input type="hidden" name="_subject" value="New OEM Inquiry - KJadeHome">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+<div class="main-content">
+<div class="form-container">
+<form action="mailto:bonnie@kjadehome.com" method="post" enctype="text/plain">
+<input type="hidden" name="subject" value="New Quote Request from Website">
 
-<label>Your Name*</label>
-<input type="text" name="name" required>
+<h2 style="margin-top:0;">Your Information</h2>
 
-<label>Company Name*</label>
-<input type="text" name="company" required>
+<div class="form-group">
+<label>Full Name <span class="required">*</span></label>
+<input type="text" name="name" required placeholder="John Smith">
+</div>
 
-<label>Email*</label>
-<input type="email" name="email" required>
+<div class="form-group">
+<label>Business Email <span class="required">*</span></label>
+<input type="email" name="email" required placeholder="john@yourcompany.com">
+<p class="hint">We only respond to business emails</p>
+</div>
 
-<label>Country / Market</label>
-<input type="text" name="country">
+<div class="form-group">
+<label>Company Name <span class="required">*</span></label>
+<input type="text" name="company" required placeholder="Your Company LLC">
+</div>
 
-<label>Product Category</label>
-<select name="product">
-<option>Ceramic Decor</option>
-<option>Glass Decor</option>
-<option>Pet Bed</option>
-<option>Custom Product</option>
+<div class="form-group">
+<label>Website / Store URL</label>
+<input type="url" name="website" placeholder="https://www.yourstore.com">
+</div>
+
+<div class="form-group">
+<label>Your Role <span class="required">*</span></label>
+<select name="role" required>
+<option value="">Select your role...</option>
+<option value="owner">Business Owner / Founder</option>
+<option value="buyer">Purchasing / Buyer</option>
+<option value="manager">Product Manager</option>
+<option value="sales">Sales / Marketing</option>
+<option value="other">Other</option>
 </select>
+</div>
 
-<label>MOQ</label>
-<input type="text" name="moq">
+<h2>Product Requirements</h2>
 
-<label>Target Price</label>
-<input type="text" name="price">
+<div class="form-group">
+<label>Interested Products <span class="required">*</span></label>
+<div class="checkbox-group">
+<label><input type="checkbox" name="products" value="ceramic"> Ceramic Decor</label>
+<label><input type="checkbox" name="products" value="glass"> Glass Decor</label>
+<label><input type="checkbox" name="products" value="petbed"> Pet Beds</label>
+</div>
+</div>
 
-<label>Message / Product Details*</label>
-<textarea name="message" rows="6" required></textarea>
+<div class="form-group">
+<label>Estimated Order Quantity <span class="required">*</span></label>
+<select name="quantity" required>
+<option value="">Select quantity range...</option>
+<option value="100-500">100 - 500 pieces</option>
+<option value="500-1000">500 - 1,000 pieces</option>
+<option value="1000-5000">1,000 - 5,000 pieces</option>
+<option value="5000+">5,000+ pieces</option>
+</select>
+</div>
 
-<button type="submit">Send Inquiry</button>
+<div class="form-group">
+<label>Target Price Range (USD per unit)</label>
+<input type="text" name="target_price" placeholder="e.g., $5-10">
+<p class="hint">Helps us recommend the right materials and specifications</p>
+</div>
+
+<div class="form-group">
+<label>Customization Needs</label>
+<div class="checkbox-group">
+<label><input type="checkbox" name="custom" value="logo"> Logo / Branding</label>
+<label><input type="checkbox" name="custom" value="color"> Custom Colors</label>
+<label><input type="checkbox" name="custom" value="packaging"> Custom Packaging</label>
+<label><input type="checkbox" name="custom" value="design"> Custom Design</label>
+</div>
+</div>
+
+<h2>Shipping & Logistics</h2>
+
+<div class="form-group">
+<label>Destination Country <span class="required">*</span></label>
+<input type="text" name="country" required placeholder="e.g., United States">
+</div>
+
+<div class="form-group">
+<label>Preferred Shipping Terms</label>
+<select name="shipping">
+<option value="">Select shipping terms...</option>
+<option value="FOB">FOB (Free On Board) - You arrange shipping</option>
+<option value="CIF">CIF (Cost Insurance Freight) - We ship to your port</option>
+<option value="DDP">DDP (Delivered Duty Paid) - Door to door</option>
+<option value="not_sure">Not sure - Recommend best option</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Project Timeline</label>
+<select name="timeline">
+<option value="">When do you need products?</option>
+<option value="urgent">ASAP (Expedited production)</option>
+<option value="1month">Within 1 month</option>
+<option value="2-3months">2-3 months</option>
+<option value="3months+">3+ months (planning ahead)</option>
+<option value="flexible">Flexible</option>
+</select>
+</div>
+
+<h2>Additional Details</h2>
+
+<div class="form-group">
+<label>Tell Us More About Your Project</label>
+<textarea name="details" placeholder="Describe your product requirements, target market, or any specific questions. The more details, the better we can help."></textarea>
+</div>
+
+<div class="form-group">
+<label>How Did You Find Us?</label>
+<select name="source">
+<option value="">Select source...</option>
+<option value="google">Google Search</option>
+<option value="linkedin">LinkedIn</option>
+<option value="referral">Referral / Recommendation</option>
+<option value="trade_show">Trade Show</option>
+<option value="other">Other</option>
+</select>
+</div>
+
+<button type="submit" class="btn-submit">Send Quote Request →</button>
 
 </form>
+
+<div class="trust-badges">
+<div>🔒 Your information is secure</div>
+<div>⏱️ Response within 24 hours</div>
+<div>✓ No obligation quote</div>
+</div>
+
+</div>
+</div>
+
+<div class="sidebar">
+<h3>What Happens Next?</h3>
+<ol>
+<li><strong>We Review</strong> - Our team reviews your requirements within 24 hours</li>
+<li><strong>We Respond</strong> - You'll receive a detailed quote or questions for clarification</li>
+<li><strong>Samples</strong> - If interested, we send samples for quality evaluation</li>
+<li><strong>Production</strong> - Approve samples and we begin production</li>
+</ol>
+
+<h3 style="margin-top:30px;">Need Help?</h3>
+<p style="color:#666;font-size:14px;">Not sure what to specify? Just tell us your target market and price point. We'll recommend the best products and options.</p>
+
+<h3 style="margin-top:30px;">Typical Response Time</h3>
+<p style="color:#666;font-size:14px;"><strong>Standard:</strong> 24 hours<br><strong>Complex projects:</strong> 48 hours</p>
+</div>
 
 </div>
 
 <div class="footer">
 <p>© 2026 KJadeHome. All rights reserved.</p>
+<p>Connect on <a href="https://www.linkedin.com/company/kjadehome">LinkedIn</a></p>
 </div>
 
 </body>
