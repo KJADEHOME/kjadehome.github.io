@@ -1,1 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industry Insights & Sourcing Blog | KJadeHome</title>
+<meta name="description" content="Expert insights on home decor manufacturing, OEM sourcing, supply chain management, and industry trends. Helping importers make smarter sourcing decisions.">
+<meta property="og:title" content="Industry Insights & Sourcing Blog | KJadeHome">
+<meta property="og:description" content="Expert insights on home decor manufacturing, OEM sourcing, and industry trends from 20+ years of experience.">
+<meta property="og:image" content="https://www.kjadehome.com/images/og-share.jpg">
+<meta property="og:url" content="https://www.kjadehome.com/blog/">
 
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;}
+
+/* Navigation */
+.nav{background:#0B1F3A;padding:0 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+.nav-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.nav-brand a{color:#C9A86A;text-decoration:none;font-size:20px;font-weight:bold;}
+.nav-links{display:flex;gap:30px;flex-wrap:wrap;}
+.nav-links a{color:#fff;text-decoration:none;padding:18px 0;font-size:15px;display:block;}
+.nav-links a:hover{color:#C9A86A;}
+.nav-links a.active{color:#C9A86A;border-bottom:2px solid #C9A86A;}
+
+.header{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
+.header h1{font-size:36px;margin-bottom:15px;}
+.header .subtitle{font-size:18px;opacity:0.9;max-width:700px;margin:auto;}
+
+.section{padding:60px 20px;max-width:1200px;margin:auto;}
+.section h2{text-align:center;font-size:28px;margin-bottom:40px;color:#0B1F3A;}
+
+/* Blog Grid */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;}
+.blog-card{border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;background:#fff;transition:box-shadow 0.3s;display:flex;flex-direction:column;}
+.blog-card:hover{box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.blog-card-img{height:200px;background:#f0f4f8;display:flex;align-items:center;justify-content:center;color:#999;font-size:14px;overflow:hidden;}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;}
+.blog-card-body{padding:25px;flex-grow:1;display:flex;flex-direction:column;}
+.blog-card-category{display:inline-block;background:#C9A86A;color:#fff;padding:4px 12px;border-radius:3px;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;width:fit-content;}
+.blog-card h3{color:#0B1F3A;margin:0 0 12px 0;font-size:20px;line-height:1.4;}
+.blog-card p{color:#666;font-size:15px;margin:0 0 15px 0;flex-grow:1;}
+.blog-card-meta{color:#999;font-size:13px;display:flex;gap:15px;}
+.blog-card a{color:#C9A86A;text-decoration:none;font-weight:bold;}
+.blog-card a:hover{text-decoration:underline;}
+
+/* Categories */
+.categories{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
+.cat-btn{background:#f0f4f8;color:#0B1F3A;padding:10px 20px;border-radius:30px;text-decoration:none;font-size:14px;transition:all 0.3s;border:1px solid #e2e8f0;}
+.cat-btn:hover,.cat-btn.active{background:#0B1F3A;color:#fff;}
+
+/* Sidebar */
+.content-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;}
+.sidebar .widget{background:#f8f9fa;padding:25px;border-radius:8px;margin-bottom:25px;border-left:4px solid #C9A86A;}
+.sidebar .widget h3{color:#0B1F3A;margin-top:0;font-size:18px;}
+.sidebar .widget ul{padding-left:20px;margin:0;}
+.sidebar .widget li{margin-bottom:10px;color:#555;}
+.sidebar .widget a{color:#C9A86A;text-decoration:none;}
+.sidebar .widget a:hover{text-decoration:underline;}
+.sidebar .widget p{font-size:14px;color:#666;}
+
+/* CTA Section */
+.cta-section{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;margin-top:60px;}
+.cta-section h2{margin-bottom:15px;font-size:32px;}
+.cta-section p{margin-bottom:30px;opacity:0.9;}
+.btn{background:#C9A86A;color:#fff;padding:14px 30px;text-decoration:none;border-radius:5px;display:inline-block;font-weight:bold;font-size:16px;}
+.btn:hover{background:#b8965a;}
+
+.footer{background:#0B1F3A;color:#fff;text-align:center;padding:40px 20px;margin-top:0;}
+.footer p{margin:5px 0;opacity:0.8;font-size:14px;}
+.footer a{color:#C9A86A;text-decoration:none;}
+
+@media (max-width:768px){
+.content-layout{grid-template-columns:1fr;}
+.blog-grid{grid-template-columns:1fr;}
+.header h1{font-size:28px;}
+.nav-links{gap:15px;}
+}
+</style>
+
+<!-- Blog Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "KJadeHome Industry Insights Blog",
+  "url": "https://www.kjadehome.com/blog/",
+  "description": "Expert insights on home decor manufacturing, OEM sourcing, and industry trends.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "KJadeHome",
+    "logo": {"@type": "ImageObject", "url": "https://www.kjadehome.com/images/logo.png"}
+  }
+}
+</script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><a href="https://www.kjadehome.com">KJadeHome</a></div>
+    <div class="nav-links">
+      <a href="https://www.kjadehome.com">Home</a>
+      <a href="https://www.kjadehome.com/products.html">Products</a>
+      <a href="https://www.kjadehome.com/about.html">About</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="https://www.kjadehome.com/inquiry.html">Get Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<div class="header">
+  <h1>Industry Insights & Sourcing Blog</h1>
+  <p class="subtitle">Practical guides and expert perspectives on home decor manufacturing, OEM sourcing, and building resilient supply chains.</p>
+</div>
+
+<!-- Blog Section -->
+<div class="section">
+
+  <!-- Category Filters -->
+  <div class="categories">
+    <a href="#" class="cat-btn active">All</a>
+    <a href="#industry" class="cat-btn">Industry Trends</a>
+    <a href="#sourcing" class="cat-btn">Sourcing Tips</a>
+    <a href="#culture" class="cat-btn">Business Culture</a>
+  </div>
+
+  <div class="content-layout">
+    <div class="main-content">
+      <div class="blog-grid">
+
+        <!-- Article 1 -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=400&fit=crop" alt="Home decor sourcing">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-category">Industry Trends</span>
+            <h3>Home Decor Industry Trends 2025: What U.S. Importers Need to Know</h3>
+            <p>From sustainable materials to minimalist aesthetics, discover the trends shaping consumer demand and how to position your product line for success.</p>
+            <div class="blog-card-meta">
+              <span>April 22, 2026</span>
+              <span>5 min read</span>
+            </div>
+            <br>
+            <a href="home-decor-trends-2025.html">Read Article →</a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop" alt="Ceramic manufacturing">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-category">Sourcing Tips</span>
+            <h3>Custom Ceramic Vases: Understanding MOQ, Pricing & Lead Times</h3>
+            <p>A practical guide for retailers and importers on navigating ceramic manufacturing — from initial design to final delivery.</p>
+            <div class="blog-card-meta">
+              <span>April 20, 2026</span>
+              <span>7 min read</span>
+            </div>
+            <br>
+            <a href="ceramic-vases-moq-guide.html">Read Article →</a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="BSCI certification">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-category">Sourcing Tips</span>
+            <h3>BSCI Certification: What Every Importer Should Verify</h3>
+            <p>Why factory audits matter, what BSCI covers, and how to ensure your supply chain meets ethical and compliance standards.</p>
+            <div class="blog-card-meta">
+              <span>April 18, 2026</span>
+              <span>6 min read</span>
+            </div>
+            <br>
+            <a href="bsci-certification-guide.html">Read Article →</a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1517457210348-703079e57d4b?w=600&h=400&fit=crop" alt="Business culture">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-card-category">Business Culture</span>
+            <h3>Understanding Chinese Business Culture: Colors, Symbols & Etiquette</h3>
+            <p>Navigate cross-cultural business relationships with confidence. Learn how color symbolism and etiquette shape negotiations in China.</p>
+            <div class="blog-card-meta">
+              <span>April 15, 2026</span>
+              <span>4 min read</span>
+            </div>
+            <br>
+            <a href="chinese-business-culture-colors.html">Read Article →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>About the Author</h3>
+        <p><strong>Bonnie Woo</strong> — 20+ years in international trade and B2B sourcing. Leading KJadeHome, a BSCI-certified OEM manufacturer of home decor and pet products.</p>
+        <p><a href="https://www.linkedin.com/in/bonnie-woo-7b74911b6/" target="_blank">Connect on LinkedIn →</a></p>
+      </div>
+
+      <div class="widget">
+        <h3>Topics</h3>
+        <ul>
+          <li><a href="#industry">Industry Trends</a></li>
+          <li><a href="#sourcing">Sourcing & Procurement</a></li>
+          <li><a href="#ceramic">Ceramic Manufacturing</a></li>
+          <li><a href="#glass">Glass Products</a></li>
+          <li><a href="#pet">Pet Products</a></li>
+          <li><a href="#compliance">Compliance & Certifications</a></li>
+          <li><a href="#culture">Business Culture</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>Need a Quote?</h3>
+        <p>Looking for custom home decor or pet products? We offer flexible MOQ starting at 100pcs.</p>
+        <a href="https://www.kjadehome.com/inquiry.html" class="btn" style="display:block;text-align:center;">Get Wholesale Quote</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to Source Smarter?</h2>
+  <p>Get wholesale pricing and catalog within 24 hours. No commitment required.</p>
+  <a href="https://www.kjadehome.com/inquiry.html" class="btn">Get My Quote</a>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p><strong>KJadeHome</strong> — OEM Manufacturer Since 2011</p>
+  <p>Ceramic Decor | Glass Decor | Pet Products | BSCI Certified</p>
+  <p>📧 <a href="mailto:info@kjadehome.com">info@kjadehome.com</a> | 🌐 <a href="https://www.kjadehome.com">www.kjadehome.com</a></p>
+  <p style="margin-top:15px;font-size:12px;">© 2026 KJadeHome. All rights reserved.</p>
+</div>
+
+</body>
+</html>

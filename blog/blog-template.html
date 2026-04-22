@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 每次写新文章时，修改以下内容 -->
+<!-- ════════════════════════════════════════════ -->
+
+<title>文章标题 | KJadeHome Blog</title>
+<meta name="description" content="文章的SEO描述，150字以内，包含关键词。">
+<meta property="og:title" content="文章标题 | KJadeHome Blog">
+<meta property="og:description" content="文章的社交媒体分享描述。">
+<meta property="og:image" content="https://www.kjadehome.com/images/og-share.jpg">
+
+<!-- ════════════════════════════════════════════ -->
+
+<meta property="og:url" content="https://www.kjadehome.com/blog/文章文件名.html">
+<meta property="og:type" content="article">
+
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;}
+
+/* Navigation */
+.nav{background:#0B1F3A;padding:0 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+.nav-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.nav-brand a{color:#C9A86A;text-decoration:none;font-size:20px;font-weight:bold;}
+.nav-links{display:flex;gap:30px;flex-wrap:wrap;}
+.nav-links a{color:#fff;text-decoration:none;padding:18px 0;font-size:15px;display:block;}
+.nav-links a:hover{color:#C9A86A;}
+.nav-links a.active{color:#C9A86A;border-bottom:2px solid #C9A86A;}
+
+/* Article Header */
+.article-header{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
+.article-category{display:inline-block;background:#C9A86A;color:#fff;padding:4px 16px;border-radius:3px;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:15px;}
+.article-header h1{font-size:36px;margin:0 auto 15px auto;max-width:800px;line-height:1.3;}
+.article-meta{color:rgba(255,255,255,0.8);font-size:15px;}
+.article-meta span{margin:0 10px;}
+
+/* Layout */
+.content-layout{display:grid;grid-template-columns:1fr 300px;gap:50px;max-width:1200px;margin:auto;padding:60px 20px;}
+
+/* Article Content */
+.article-content{max-width:800px;}
+.article-content h2{color:#0B1F3A;font-size:24px;margin:40px 0 20px 0;padding-bottom:10px;border-bottom:2px solid #C9A86A;}
+.article-content h3{color:#0B1F3A;font-size:20px;margin:30px 0 15px 0;}
+.article-content p{font-size:17px;margin-bottom:20px;color:#444;line-height:1.8;}
+.article-content ul,.article-content ol{padding-left:25px;margin-bottom:20px;}
+.article-content li{margin-bottom:10px;font-size:17px;color:#444;line-height:1.7;}
+.article-content strong{color:#0B1F3A;}
+.article-content a{color:#C9A86A;text-decoration:underline;}
+.article-content a:hover{color:#b8965a;}
+.article-content img{max-width:100%;height:auto;border-radius:8px;margin:20px 0;}
+.article-content blockquote{border-left:4px solid #C9A86A;padding:15px 25px;margin:25px 0;background:#f8f9fa;font-style:italic;color:#555;}
+.article-content blockquote p{margin:0;}
+
+/* Tags */
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 20px 0;padding-top:30px;border-top:1px solid #e2e8f0;}
+.tag{background:#f0f4f8;color:#0B1F3A;padding:6px 14px;border-radius:20px;font-size:13px;text-decoration:none;}
+.tag:hover{background:#0B1F3A;color:#fff;}
+
+/* Share */
+.share{margin-top:20px;}
+.share a{display:inline-block;margin-right:15px;color:#0B1F3A;text-decoration:none;font-size:15px;}
+.share a:hover{color:#C9A86A;}
+
+/* Author Box */
+.author-box{background:#f8f9fa;padding:30px;border-radius:8px;margin-top:40px;display:flex;gap:20px;align-items:flex-start;border-left:4px solid #C9A86A;}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:#ddd;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#999;}
+.author-info h3{margin:0 0 8px 0;color:#0B1F3A;font-size:18px;}
+.author-info p{margin:0 0 10px 0;color:#666;font-size:15px;line-height:1.6;}
+.author-info a{color:#C9A86A;text-decoration:none;}
+
+/* Related Posts */
+.related{background:#f0f4f8;padding:50px 20px;}
+.related-inner{max-width:1200px;margin:auto;}
+.related h2{text-align:center;color:#0B1F3A;margin-bottom:30px;}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.related-card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.05);}
+.related-card h4{margin:0 0 10px 0;color:#0B1F3A;font-size:16px;}
+.related-card p{font-size:14px;color:#666;margin:0 0 12px 0;}
+.related-card a{color:#C9A86A;text-decoration:none;font-size:14px;font-weight:bold;}
+
+/* Sidebar */
+.sidebar .widget{background:#f8f9fa;padding:25px;border-radius:8px;margin-bottom:25px;border-left:4px solid #C9A86A;}
+.sidebar .widget h3{color:#0B1F3A;margin-top:0;font-size:18px;}
+.sidebar .widget ul{padding-left:20px;margin:0;}
+.sidebar .widget li{margin-bottom:10px;color:#555;}
+.sidebar .widget a{color:#C9A86A;text-decoration:none;}
+.sidebar .widget a:hover{text-decoration:underline;}
+.sidebar .widget p{font-size:14px;color:#666;}
+
+/* CTA */
+.cta-section{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
+.cta-section h2{margin-bottom:15px;font-size:32px;}
+.cta-section p{margin-bottom:30px;opacity:0.9;}
+.btn{background:#C9A86A;color:#fff;padding:14px 30px;text-decoration:none;border-radius:5px;display:inline-block;font-weight:bold;font-size:16px;}
+.btn:hover{background:#b8965a;}
+
+.footer{background:#0B1F3A;color:#fff;text-align:center;padding:40px 20px;margin-top:0;}
+.footer p{margin:5px 0;opacity:0.8;font-size:14px;}
+.footer a{color:#C9A86A;text-decoration:none;}
+
+@media (max-width:768px){
+.content-layout{grid-template-columns:1fr;padding:40px 15px;}
+.article-header h1{font-size:26px;}
+.author-box{flex-direction:column;text-align:center;}
+.nav-links{gap:15px;}
+}
+</style>
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "文章标题",
+  "description": "文章描述",
+  "image": "https://www.kjadehome.com/images/og-share.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Bonnie Woo",
+    "url": "https://www.linkedin.com/in/bonnie-woo-7b74911b6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "KJadeHome",
+    "logo": {"@type": "ImageObject", "url": "https://www.kjadehome.com/images/logo.png"}
+  },
+  "datePublished": "2026-04-22",
+  "dateModified": "2026-04-22",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.kjadehome.com/blog/文章文件名.html"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><a href="https://www.kjadehome.com">KJadeHome</a></div>
+    <div class="nav-links">
+      <a href="https://www.kjadehome.com">Home</a>
+      <a href="https://www.kjadehome.com/products.html">Products</a>
+      <a href="https://www.kjadehome.com/about.html">About</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="https://www.kjadehome.com/inquiry.html">Get Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Header -->
+<div class="article-header">
+  <span class="article-category">文章分类</span>
+  <h1>文章标题写在这里</h1>
+  <div class="article-meta">
+    <span>By Bonnie Woo</span>
+    <span>|</span>
+    <span>April 22, 2026</span>
+    <span>|</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<!-- Article Content -->
+<div class="content-layout">
+  <article class="article-content">
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- 文章内容从这里开始写 -->
+    <!-- ════════════════════════════════════════════ -->
+
+    <p>文章开头段落。用一两句话吸引读者，说明这篇文章能解决什么问题。</p>
+
+    <h2>第一个小标题</h2>
+    <p>正文段落。保持段落简短，每段3-5句话。</p>
+    <ul>
+      <li>要点一</li>
+      <li>要点二</li>
+      <li>要点三</li>
+    </ul>
+
+    <h2>第二个小标题</h2>
+    <p>正文段落。可以适当加粗关键词。</p>
+    <blockquote>
+      <p>引用或重点提示可以放在这里。</p>
+    </blockquote>
+
+    <h3>子标题（如果需要更细的层级）</h3>
+    <p>更多内容...</p>
+
+    <h2>总结</h2>
+    <p>总结文章内容，加一个行动号召。</p>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- 文章CTA（每篇文章底部都保留这个） -->
+    <!-- ════════════════════════════════════════════ -->
+
+    <div style="background:#f0f4f8;padding:25px;border-radius:8px;margin:30px 0;border-left:4px solid #C9A86A;">
+      <h3 style="margin-top:0;color:#0B1F3A;">Looking for a Reliable OEM Partner?</h3>
+      <p style="margin-bottom:15px;">At <strong>KJadeHome</strong>, we specialize in custom manufacturing for ceramic decor, glass ornaments, and pet products. Flexible MOQ from 100pcs. BSCI certified. FOB/CIF/DDP shipping available.</p>
+      <a href="https://www.kjadehome.com/inquiry.html" class="btn">Request a Wholesale Quote</a>
+      <span style="margin:0 10px;">or</span>
+      <a href="https://www.kjadehome.com/products.html" style="color:#C9A86A;font-weight:bold;">Browse Product Catalog →</a>
+    </div>
+
+    <!-- Tags -->
+    <div class="tags">
+      <span style="font-weight:bold;color:#0B1F3A;margin-right:10px;">Tags:</span>
+      <a href="#" class="tag">Home Decor</a>
+      <a href="#" class="tag">OEM Manufacturing</a>
+      <a href="#" class="tag">Sourcing</a>
+    </div>
+
+    <!-- Share -->
+    <div class="share">
+      <span style="font-weight:bold;color:#0B1F3A;margin-right:10px;">Share:</span>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="mailto:?subject=文章标题&body=Check out this article: https://www.kjadehome.com/blog/文章文件名.html">Email</a>
+    </div>
+
+    <!-- Author Box -->
+    <div class="author-box">
+      <div class="author-avatar">👤</div>
+      <div class="author-info">
+        <h3>Bonnie Woo</h3>
+        <p>20+ years in international trade and B2B sourcing. Leading KJadeHome, a BSCI-certified OEM manufacturer helping U.S. retailers and importers source smarter. <a href="https://www.linkedin.com/in/bonnie-woo-7b74911b6/" target="_blank">Connect on LinkedIn →</a></p>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="widget">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#">第一个小标题</a></li>
+        <li><a href="#">第二个小标题</a></li>
+        <li><a href="#">总结</a></li>
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3>Popular Articles</h3>
+      <ul>
+        <li><a href="../how-to-choose-oem-manufacturer.html">How to Choose an OEM Manufacturer</a></li>
+        <li><a href="bsci-certification-guide.html">BSCI Certification Guide</a></li>
+        <li><a href="ceramic-vases-moq-guide.html">Ceramic Vases: MOQ & Pricing Guide</a></li>
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3>Need a Quote?</h3>
+      <p>Flexible MOQ from 100pcs. BSCI certified factory.</p>
+      <a href="https://www.kjadehome.com/inquiry.html" class="btn" style="display:block;text-align:center;">Get Wholesale Quote</a>
+    </div>
+  </aside>
+
+</div>
+
+<!-- Related Posts -->
+<div class="related">
+  <div class="related-inner">
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <h4>相关文章标题1</h4>
+        <p>简短描述...</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="related-card">
+        <h4>相关文章标题2</h4>
+        <p>简短描述...</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="related-card">
+        <h4>相关文章标题3</h4>
+        <p>简短描述...</p>
+        <a href="#">Read More →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to Source Smarter?</h2>
+  <p>Get wholesale pricing and catalog within 24 hours. No commitment required.</p>
+  <a href="https://www.kjadehome.com/inquiry.html" class="btn">Get My Quote</a>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p><strong>KJadeHome</strong> — OEM Manufacturer Since 2011</p>
+  <p>Ceramic Decor | Glass Decor | Pet Products | BSCI Certified</p>
+  <p>📧 <a href="mailto:info@kjadehome.com">info@kjadehome.com</a> | 🌐 <a href="https://www.kjadehome.com">www.kjadehome.com</a></p>
+  <p style="margin-top:15px;font-size:12px;">© 2026 KJadeHome. All rights reserved.</p>
+</div>
+
+</body>
+</html>
