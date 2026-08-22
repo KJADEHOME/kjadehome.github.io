@@ -26,6 +26,9 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 .checkbox-group label{display:flex;align-items:center;gap:8px;font-weight:normal;cursor:pointer;}
 .btn-submit{width:100%;padding:16px;background:#C9A86A;color:#fff;border:none;border-radius:5px;font-size:18px;font-weight:bold;cursor:pointer;}
 .btn-submit:hover{background:#b8965a;}
+.btn-submit:disabled{opacity:0.65;cursor:wait;}
+.form-status{margin:16px 0 0;font-weight:bold;}
+.hp-field{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
 .trust-badges{display:flex;justify-content:center;gap:30px;margin-top:30px;padding-top:30px;border-top:1px solid #e2e8f0;}
 .trust-badges div{text-align:center;color:#666;font-size:14px;}
 .sidebar{display:none;}
@@ -55,8 +58,10 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 
 <div class="main-content">
 <div class="form-container">
-<form action="mailto:bonnie@kjadehome.com" method="post" enctype="text/plain">
-<input type="hidden" name="subject" value="New Quote Request from Website">
+<form id="kjadehome-inquiry-form" method="post">
+<div class="hp-field" aria-hidden="true">
+<label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+</div>
 
 <h2 style="margin-top:0;">Your Information</h2>
 
@@ -78,7 +83,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 
 <div class="form-group">
 <label>Website / Store URL</label>
-<input type="url" name="website" placeholder="https://www.yourstore.com">
+<input type="url" name="company_website" placeholder="https://www.yourstore.com">
 </div>
 
 <div class="form-group">
@@ -181,6 +186,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 </div>
 
 <button type="submit" class="btn-submit">Send Quote Request →</button>
+<p class="form-status" role="status" aria-live="polite"></p>
 
 </form>
 
@@ -215,6 +221,114 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 <p>© 2026 KJadeHome. All rights reserved.</p>
 <p>Connect on <a href="https://www.linkedin.com/company/kjadehome">LinkedIn</a></p>
 </div>
+
+<script>
+(function () {
+  const endpoint = 'https://jipgzavuxvnaisgxcvts.supabase.co/functions/v1/entrol-submit-lead';
+  const form = document.getElementById('kjadehome-inquiry-form');
+  const status = form.querySelector('.form-status');
+  const button = form.querySelector('button[type="submit"]');
+  const initialParams = new URLSearchParams(window.location.search);
+
+  ['name', 'email', 'company'].forEach(function (name) {
+    const field = form.elements.namedItem(name);
+    const value = initialParams.get(name);
+    if (field && value) field.value = value;
+  });
+  if (initialParams.get('message')) form.elements.namedItem('details').value = initialParams.get('message');
+  const roleByHomepageType = { store: 'owner', importer: 'buyer', amazon: 'owner', other: 'other' };
+  if (roleByHomepageType[initialParams.get('type')]) {
+    form.elements.namedItem('role').value = roleByHomepageType[initialParams.get('type')];
+  }
+  const initialParams = new URLSearchParams(window.location.search);
+
+  ['name', 'email', 'company'].forEach(function (name) {
+    const field = form.elements.namedItem(name);
+    const value = initialParams.get(name);
+    if (field && value) field.value = value;
+  });
+  if (initialParams.get('message')) form.elements.namedItem('details').value = initialParams.get('message');
+  const roleByHomepageType = { store: 'owner', importer: 'buyer', amazon: 'owner', other: 'other' };
+  if (roleByHomepageType[initialParams.get('type')]) {
+    form.elements.namedItem('role').value = roleByHomepageType[initialParams.get('type')];
+  }
+
+  function selectedValues(name) {
+    return Array.from(form.querySelectorAll('[name="' + name + '"]:checked')).map(function (field) {
+      return field.closest('label') ? field.closest('label').textContent.trim() : field.value;
+    });
+  }
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const products = selectedValues('products');
+    if (!products.length) {
+      status.textContent = 'Please select at least one product category.';
+      status.style.color = '#b42318';
+      return;
+    }
+
+    const custom = selectedValues('custom');
+    const params = new URLSearchParams(window.location.search);
+    const details = [
+      data.get('details') ? 'Project details: ' + data.get('details') : '',
+      data.get('role') ? 'Buyer role: ' + data.get('role') : '',
+      data.get('company_website') ? 'Company website: ' + data.get('company_website') : '',
+      data.get('target_price') ? 'Target price: ' + data.get('target_price') : '',
+      custom.length ? 'Customization: ' + custom.join(', ') : '',
+      data.get('shipping') ? 'Shipping terms: ' + data.get('shipping') : '',
+      data.get('timeline') ? 'Timeline: ' + data.get('timeline') : '',
+      data.get('source') ? 'How they found us: ' + data.get('source') : ''
+    ].filter(Boolean).join('\n');
+    const payload = {
+      request_id: crypto.randomUUID(),
+      submission_type: 'inquiry',
+      name: String(data.get('name') || ''),
+      email: String(data.get('email') || ''),
+      company: String(data.get('company') || ''),
+      product_interest: products.join(', '),
+      quantity: String(data.get('quantity') || ''),
+      target_market: String(data.get('country') || ''),
+      message: details,
+      website: String(data.get('website') || ''),
+      source_page: window.location.href,
+      landing_page: window.location.href,
+      referrer: document.referrer || 'direct',
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_content: params.get('utm_content') || '',
+      utm_term: params.get('utm_term') || ''
+    };
+
+    button.disabled = true;
+    button.textContent = 'Sending...';
+    status.textContent = '';
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Request-Id': payload.request_id },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(function () { return {}; });
+      if (!response.ok || !result.ok) throw new Error(result.error || 'submission_failed');
+      form.reset();
+      status.textContent = 'Thank you. Your inquiry has been received and our sourcing team will reply by email.';
+      status.style.color = '#2f6b1f';
+    } catch (error) {
+      console.error('KJadeHome inquiry submission failed:', error);
+      status.textContent = 'We could not send your inquiry. Please email wangyan@entrol.com.';
+      status.style.color = '#b42318';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Send Quote Request →';
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
