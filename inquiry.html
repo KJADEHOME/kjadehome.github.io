@@ -116,7 +116,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 
 <div class="main-content">
 <div class="form-container">
-<form id="kjadehome-inquiry-form" method="post">
+<form id="kjadehome-inquiry-form" method="post" action="https://formsubmit.co/wangyan@entrol.com">
 <div class="hp-field" aria-hidden="true">
 <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
 </div>
@@ -286,18 +286,6 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
   const form = document.getElementById('kjadehome-inquiry-form');
   const status = form.querySelector('.form-status');
   const button = form.querySelector('button[type="submit"]');
-  const initialParams = new URLSearchParams(window.location.search);
-
-  ['name', 'email', 'company'].forEach(function (name) {
-    const field = form.elements.namedItem(name);
-    const value = initialParams.get(name);
-    if (field && value) field.value = value;
-  });
-  if (initialParams.get('message')) form.elements.namedItem('details').value = initialParams.get('message');
-  const roleByHomepageType = { store: 'owner', importer: 'buyer', amazon: 'owner', other: 'other' };
-  if (roleByHomepageType[initialParams.get('type')]) {
-    form.elements.namedItem('role').value = roleByHomepageType[initialParams.get('type')];
-  }
   const initialParams = new URLSearchParams(window.location.search);
 
   ['name', 'email', 'company'].forEach(function (name) {
