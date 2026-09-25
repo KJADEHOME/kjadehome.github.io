@@ -116,7 +116,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 
 <div class="main-content">
 <div class="form-container">
-<form id="kjadehome-inquiry-form" method="post" action="https://formsubmit.co/wangyan@entrol.com">
+<form id="kjadehome-inquiry-form" method="post" action="https://formsubmit.co/bonnie@kjadehome.com">
 <div class="hp-field" aria-hidden="true">
 <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
 </div>
@@ -283,7 +283,6 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
 
 <script>
 (function () {
-  const endpoint = 'https://jipgzavuxvnaisgxcvts.supabase.co/functions/v1/entrol-submit-lead';
   const form = document.getElementById('kjadehome-inquiry-form');
   const status = form.querySelector('.form-status');
   const button = form.querySelector('button[type="submit"]');
@@ -355,48 +354,32 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
     button.textContent = 'Sending...';
     status.textContent = '';
     try {
-      let delivered = false;
-      try {
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Request-Id': payload.request_id },
-          body: JSON.stringify(payload)
-        });
-        const result = await response.json().catch(function () { return {}; });
-        delivered = response.ok && !!result.ok;
-      } catch (primaryError) {
-        console.warn('Primary endpoint unavailable, trying backup channel…', primaryError);
-        delivered = false;
-      }
-
-      // 备用通道：主接口不可用时直投邮箱，确保询盘不丢
-      if (!delivered) {
-        const backup = await fetch('https://formsubmit.co/ajax/wangyan@entrol.com', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            _subject: 'New inquiry from kjadehome.com (backup channel)',
-            Name: payload.name,
-            Email: payload.email,
-            Company: payload.company,
-            'Product interest': payload.product_interest,
-            Quantity: payload.quantity,
-            'Target market': payload.target_market,
-            Message: payload.message,
-            'Source page': payload.source_page,
-            'UTM source': payload.utm_source,
-            'UTM campaign': payload.utm_campaign
-          })
-        });
-        if (!backup.ok) throw new Error('submission_failed');
-      }
+      // 直投 FormSubmit：原 Supabase 中转接口已随建站方项目下线，改为单通道直投
+      const delivery = await fetch('https://formsubmit.co/ajax/bonnie@kjadehome.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New inquiry from kjadehome.com',
+          Name: payload.name,
+          Email: payload.email,
+          Company: payload.company,
+          'Product interest': payload.product_interest,
+          Quantity: payload.quantity,
+          'Target market': payload.target_market,
+          Message: payload.message,
+          'Source page': payload.source_page,
+          'UTM source': payload.utm_source,
+          'UTM campaign': payload.utm_campaign
+        })
+      });
+      if (!delivery.ok) throw new Error('submission_failed');
 
       form.reset();
       status.textContent = 'Thank you. Your inquiry has been received and our sourcing team will reply by email.';
       status.style.color = '#2f6b1f';
     } catch (error) {
       console.error('KJadeHome inquiry submission failed:', error);
-      status.textContent = 'We could not send your inquiry. Please email wangyan@entrol.com.';
+      status.textContent = 'We could not send your inquiry. Please email bonnie@kjadehome.com.';
       status.style.color = '#b42318';
     } finally {
       button.disabled = false;

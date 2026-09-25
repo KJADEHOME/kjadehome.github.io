@@ -4,11 +4,25 @@ const test = require('node:test');
 
 const inquiry = fs.readFileSync('inquiry.html', 'utf8');
 
-test('KJadeHome inquiry form uses the first-party lead API, not mailto', () => {
-  assert.doesNotMatch(inquiry, /mailto:bonnie@kjadehome\.com/i);
+test('KJadeHome inquiry form delivers to bonnie@kjadehome.com, not third parties', () => {
   assert.doesNotMatch(inquiry, /<form[^>]+action=["']mailto:/i);
-  assert.match(inquiry, /entrol-submit-lead/);
-  assert.match(inquiry, /fetch\(endpoint/);
+  assert.match(inquiry, /formsubmit\.co\/bonnie@kjadehome\.com/);
+  assert.match(inquiry, /formsubmit\.co\/ajax\/bonnie@kjadehome\.com/);
+  assert.doesNotMatch(inquiry, /entrol/i);
+  assert.doesNotMatch(inquiry, /wangyan/i);
+  assert.doesNotMatch(inquiry, /supabase\.co/i);
+});
+
+test('homepage quote form also targets bonnie@kjadehome.com', () => {
+  const home = fs.readFileSync('index.html', 'utf8');
+  assert.match(home, /formsubmit\.co\/bonnie@kjadehome\.com/);
+  assert.doesNotMatch(home, /entrol|wangyan/i);
+});
+
+test('about page structured data shows the company email', () => {
+  const about = fs.readFileSync('about.html', 'utf8');
+  assert.match(about, /bonnie@kjadehome\.com/);
+  assert.doesNotMatch(about, /entrol|wangyan/i);
 });
 
 test('lead payload includes durable identity, attribution and buyer requirements', () => {
