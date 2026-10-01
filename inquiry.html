@@ -287,6 +287,21 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;
   const status = form.querySelector('.form-status');
   const button = form.querySelector('button[type="submit"]');
   const initialParams = new URLSearchParams(window.location.search);
+  // P1: 预填产品线（产品页 CTA 带 ?product=ceramic|glass|kitchen-storage|acrylic）
+  var productBySlug = {
+    'ceramic': 'ceramic',
+    'glass': 'glass',
+    'kitchen-storage': 'kitchen-storage',
+    'acrylic': 'kitchen-storage'
+  };
+  var presetProduct = productBySlug[String(initialParams.get('product') || '').trim()];
+  if (presetProduct) {
+    var boxes = form.querySelectorAll('input[name="products"]');
+    for (var i = 0; i < boxes.length; i++) {
+      if (boxes[i].value === presetProduct) { boxes[i].checked = true; }
+    }
+  }
+
 
   ['name', 'email', 'company'].forEach(function (name) {
     const field = form.elements.namedItem(name);
