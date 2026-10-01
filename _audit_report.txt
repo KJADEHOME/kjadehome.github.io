@@ -1,0 +1,257 @@
+Total HTML files: 19
+==============================================================================
+
+### about.html  (13 KB, ~312 words)
+  title     : About KJadeHome | OEM Manufacturing Factory | China
+  desc      : OK len=149
+  canonical : https://www.kjadehome.com/about.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x6
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['ContactPoint', 'Organization']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 2
+    H1> About KJadeHome
+
+### ajs/index.html  (0 KB, ~2 words)
+  title     : Aj Shoes 888
+  desc      : !! MISSING
+  canonical : !! MISSING
+  lang      : !! MISSING | viewport: False
+  H1 x0 | H2 x0
+  GA4/GTM   : False | float-buttons: True | og:image: False
+  JSON-LD   : 0 block(s) types=[]
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 0
+
+### blog.html  (0 KB, ~9 words)
+  title     : KJadeHome Export Insights Blog
+  desc      : !! MISSING
+  canonical : https://www.kjadehome.com/blog/
+  lang      : en | viewport: False
+  H1 x0 | H2 x0
+  GA4/GTM   : False | float-buttons: True | og:image: False
+  JSON-LD   : 0 block(s) types=[]
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 0
+
+### blog/216-antidumping-duty-chinese-furniture-2026.html  (22 KB, ~891 words)
+  title     : U.S. Imposes 216% Antidumping Duty on Chinese Bedroom Furniture | KJadeHome
+  desc      : OK len=179
+  canonical : https://www.kjadehome.com/blog/216-antidumping-duty-chinese-furniture-2026.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x9
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 13
+    H1> U.S. Imposes 216% Antidumping Duty on Chinese Bedroom Furniture — Key Facts & Ac
+
+### blog/blog-template.html  (12 KB, ~149 words)
+  title     : 文章标题 | KJadeHome Blog
+  desc      : OK len=22
+  canonical : !! MISSING
+  lang      : en | viewport: True
+  H1 x1 | H2 x5
+  GA4/GTM   : False | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 4
+    H1> 文章标题写在这里
+
+### blog/bsci-certification-guide.html  (17 KB, ~601 words)
+  title     : BSCI Certification: What Importers Should Verify | KJadeHome
+  desc      : OK len=50
+  canonical : https://www.kjadehome.com/blog/bsci-certification-guide.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x7
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 13
+    H1> Home Decor Industry Trends 2025: What U.S. Importers Need to Know
+
+### blog/ceramic-mug-moq-guide.html  (18 KB, ~661 words)
+  title     : Custom Ceramic Mugs: MOQ, Pricing & Lead Times Explained | KJadeHome
+  desc      : OK len=157
+  canonical : https://www.kjadehome.com/blog/ceramic-mug-moq-guide.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x7
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 13
+    H1> Home Decor Industry Trends 2025: What U.S. Importers Need to Know
+
+### blog/chinese-business-culture-colors.html  (17 KB, ~616 words)
+  title     : Chinese Business Culture: Colours, Symbols & Etiquette | KJadeHome
+  desc      : OK len=150
+  canonical : https://www.kjadehome.com/blog/chinese-business-culture-colors.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x7
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 13
+    H1> Home Decor Industry Trends 2025: What U.S. Importers Need to Know
+
+### blog/consumer-desirability-home-furnishings-2026.html  (22 KB, ~1053 words)
+  title     : From “Can I Afford It?” to “Do I Deserve It?” — How Consumer Psychology Is Reshaping Home Furnishing
+  desc      : OK len=214
+  canonical : https://www.kjadehome.com/blog/consumer-desirability-home-furnishings-2026.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x5
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 14
+    H1> From “Can I Afford It?” to “Do I Deserve It?” — How Consumer Psychology Is Resha
+
+### blog/home-decor-trends-2025.html  (19 KB, ~755 words)
+  title     : Home Decor Industry Trends 2025: What U.S. Importers Need to Know | KJadeHome
+  desc      : OK len=183
+  canonical : https://www.kjadehome.com/blog/home-decor-trends-2025.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x9
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 13
+    H1> Home Decor Industry Trends 2025: What U.S. Importers Need to Know
+
+### blog/index.html  (16 KB, ~368 words)
+  title     : Industry Insights & Sourcing Blog | KJadeHome
+  desc      : OK len=155
+  canonical : https://www.kjadehome.com/blog/
+  lang      : en | viewport: True
+  H1 x1 | H2 x1
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Blog', 'ImageObject', 'Organization']
+  imgs      : 7 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 14
+    H1> Industry Insights & Sourcing Blog
+
+### blog/us-furniture-market-flat-2026.html  (22 KB, ~1014 words)
+  title     : U.S. Furniture Market Looks Flat in 2026 — Why That's an Opportunity for Smart Suppliers | KJadeHome
+  desc      : OK len=180
+  canonical : https://www.kjadehome.com/blog/us-furniture-market-flat-2026.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x8
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['BlogPosting', 'ImageObject', 'Organization', 'Person', 'WebPage']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 14
+    H1> U.S. Furniture Market Looks Flat in 2026 — Why That's an Opportunity for Smart S
+
+### ceramic-decor.html  (46 KB, ~930 words)
+  title     : Custom Ceramic Mugs Wholesale | OEM Coffee Mug Manufacturer | KJadeHome
+  desc      : OK len=157
+  canonical : https://www.kjadehome.com/ceramic-decor.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x5
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Answer', 'FAQPage', 'Question']
+  imgs      : 152 (no-alt 1, has-loading 151)
+  forms     : 0  endpoint=[]
+  internal links: 3
+    H1> Custom Ceramic Mugs Manufacturing
+
+### glass-decor.html  (25 KB, ~517 words)
+  title     : Custom Glassware Wholesale | OEM Double-Wall Cups & Glass Teapots | KJadeHome
+  desc      : OK len=152
+  canonical : https://www.kjadehome.com/glass-decor.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x5
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Answer', 'FAQPage', 'Question']
+  imgs      : 57 (no-alt 1, has-loading 56)
+  forms     : 0  endpoint=[]
+  internal links: 3
+    H1> Custom Glassware Manufacturing
+
+### how-to-choose-oem-manufacturer.html  (11 KB, ~542 words)
+  title     : How to Choose a Reliable OEM Manufacturer in China | KJadeHome
+  desc      : OK len=163
+  canonical : https://www.kjadehome.com/how-to-choose-oem-manufacturer.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x8
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Article', 'ImageObject', 'Organization']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 4
+    H1> How to Choose a Reliable OEM Manufacturer in China
+
+### index.html  (18 KB, ~479 words)
+  title     : Reliable OEM Manufacturer for Retailers & Importers | KJadeHome
+  desc      : OK len=190
+  canonical : https://www.kjadehome.com/
+  lang      : en | viewport: True
+  H1 x1 | H2 x6
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 2 block(s) types=['Answer', 'ContactPoint', 'FAQPage', 'Organization', 'PostalAddress', 'Question']
+  imgs      : 3 (no-alt 0, has-loading 0)
+  forms     : 1  endpoint=['wangyan@entrol.com']
+  internal links: 5
+    H1> Reliable OEM Manufacturer for Retailers & Importers
+
+### inquiry.html  (17 KB, ~254 words)
+  title     : Request a Quote | OEM Manufacturing Inquiry | KJadeHome
+  desc      : OK len=120
+  canonical : https://www.kjadehome.com/inquiry.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x4
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Organization', 'Service']
+  imgs      : 0 (no-alt 0, has-loading 0)
+  forms     : 1  endpoint=['ajax/wangyan@entrol.com', 'wangyan@entrol.com']
+  internal links: 2
+    H1> Request a Quote
+
+### kitchen-storage.html  (20 KB, ~498 words)
+  title     : Custom Spice Jar & Oil Bottle Sets | OEM Kitchen Storage Supplier | KJadeHome
+  desc      : OK len=156
+  canonical : https://www.kjadehome.com/kitchen-storage.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x5
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Answer', 'FAQPage', 'Question']
+  imgs      : 26 (no-alt 1, has-loading 25)
+  forms     : 0  endpoint=[]
+  internal links: 3
+    H1> Custom Kitchen Storage & Condiment Sets
+
+### products.html  (10 KB, ~243 words)
+  title     : OEM Product Catalog | Ceramic Mugs, Glassware & Kitchen Storage | KJadeHome
+  desc      : OK len=158
+  canonical : https://www.kjadehome.com/products.html
+  lang      : en | viewport: True
+  H1 x1 | H2 x3
+  GA4/GTM   : True | float-buttons: True | og:image: True
+  JSON-LD   : 1 block(s) types=['Organization', 'Service']
+  imgs      : 3 (no-alt 0, has-loading 0)
+  forms     : 0  endpoint=[]
+  internal links: 7
+    H1> OEM Product Catalog
+
+==============================================================================
+GLOBAL CHECKS
+robots.txt exists: True
+sitemap.xml exists: True
+sitemap urls: 16
+  ?? page NOT in sitemap: ajs/index.html
+  ?? page NOT in sitemap: blog.html
+  ?? page NOT in sitemap: blog/blog-template.html
+  ?? page NOT in sitemap: index.html

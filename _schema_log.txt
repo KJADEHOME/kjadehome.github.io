@@ -1,0 +1,3 @@
+INSERTED: ceramic-decor.html
+INSERTED: glass-decor.html
+INSERTED: kitchen-storage.html

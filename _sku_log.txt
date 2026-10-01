@@ -1,0 +1,3 @@
+ceramic-decor.html       caption=151 alt=151 tip=yes
+glass-decor.html         caption=56 alt=56 tip=yes
+kitchen-storage.html     caption=25 alt=25 tip=yes
