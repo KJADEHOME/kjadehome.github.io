@@ -15,4 +15,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /aj-shoes-linktree/
+Disallow: /ajs/
+
 Sitemap: https://www.kjadehome.com/sitemap.xml
