@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mixed Container vs Full Container: Multi-Category Orders from One Factory | KJadeHome Blog</title>
+<meta name="description" content="How to plan a mixed container across ceramics, glass and acrylic — volume maths, category limits and the paperwork that keeps one shipment from holding up the rest.">
+<meta property="og:title" content="Mixed Container vs Full Container: Multi-Category Orders from One Factory">
+<meta property="og:description" content="How to plan a mixed container across ceramics, glass and acrylic — volume maths, category limits and the paperwork that keeps one shipment from holding up the rest.">
+<meta property="og:image" content="https://www.kjadehome.com/images/og-share.jpg">
+<meta property="og:url" content="https://www.kjadehome.com/blog/mixed-container-shipping-guide.html">
+<meta property="og:type" content="article">
+
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#333;line-height:1.6;}
+.nav{background:#0B1F3A;padding:0 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+.nav-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.nav-brand a{color:#C9A86A;text-decoration:none;font-size:20px;font-weight:bold;}
+.nav-links{display:flex;gap:30px;flex-wrap:wrap;}
+.nav-links a{color:#fff;text-decoration:none;padding:18px 0;font-size:15px;display:block;}
+.nav-links a:hover{color:#C9A86A;}
+.nav-links a.active{color:#C9A86A;border-bottom:2px solid #C9A86A;}
+.article-header{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
+.article-category{display:inline-block;background:#C9A86A;color:#fff;padding:4px 16px;border-radius:3px;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:15px;}
+.article-header h1{font-size:36px;margin:0 auto 15px auto;max-width:800px;line-height:1.3;}
+.article-meta{color:rgba(255,255,255,0.8);font-size:15px;}
+.article-meta span{margin:0 10px;}
+.content-layout{display:grid;grid-template-columns:1fr 300px;gap:50px;max-width:1200px;margin:auto;padding:60px 20px;}
+.article-content{max-width:800px;}
+.article-content h2{color:#0B1F3A;font-size:24px;margin:40px 0 20px 0;padding-bottom:10px;border-bottom:2px solid #C9A86A;}
+.article-content h3{color:#0B1F3A;font-size:20px;margin:30px 0 15px 0;}
+.article-content p{font-size:17px;margin-bottom:20px;color:#444;line-height:1.8;}
+.article-content ul,.article-content ol{padding-left:25px;margin-bottom:20px;}
+.article-content li{margin-bottom:10px;font-size:17px;color:#444;line-height:1.7;}
+.article-content strong{color:#0B1F3A;}
+.article-content a{color:#C9A86A;text-decoration:underline;}
+.article-content a:hover{color:#b8965a;}
+.article-content img{max-width:100%;height:auto;border-radius:8px;margin:20px 0;}
+.article-content blockquote{border-left:4px solid #C9A86A;padding:15px 25px;margin:25px 0;background:#f8f9fa;font-style:italic;color:#555;}
+.article-content blockquote p{margin:0;}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 20px 0;padding-top:30px;border-top:1px solid #e2e8f0;}
+.tag{background:#f0f4f8;color:#0B1F3A;padding:6px 14px;border-radius:20px;font-size:13px;text-decoration:none;}
+.tag:hover{background:#0B1F3A;color:#fff;}
+.share{margin-top:20px;}
+.share a{display:inline-block;margin-right:15px;color:#0B1F3A;text-decoration:none;font-size:15px;}
+.share a:hover{color:#C9A86A;}
+.author-box{background:#f8f9fa;padding:30px;border-radius:8px;margin-top:40px;display:flex;gap:20px;align-items:flex-start;border-left:4px solid #C9A86A;}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:#ddd;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#999;}
+.author-info h3{margin:0 0 8px 0;color:#0B1F3A;font-size:18px;}
+.author-info p{margin:0 0 10px 0;color:#666;font-size:15px;line-height:1.6;}
+.author-info a{color:#C9A86A;text-decoration:none;}
+.related{background:#f0f4f8;padding:50px 20px;}
+.related-inner{max-width:1200px;margin:auto;}
+.related h2{text-align:center;color:#0B1F3A;margin-bottom:30px;}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.related-card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.05);}
+.related-card h4{margin:0 0 10px 0;color:#0B1F3A;font-size:16px;}
+.related-card p{font-size:14px;color:#666;margin:0 0 12px 0;}
+.related-card a{color:#C9A86A;text-decoration:none;font-size:14px;font-weight:bold;}
+.sidebar .widget{background:#f8f9fa;padding:25px;border-radius:8px;margin-bottom:25px;border-left:4px solid #C9A86A;}
+.sidebar .widget h3{color:#0B1F3A;margin-top:0;font-size:18px;}
+.sidebar .widget ul{padding-left:20px;margin:0;}
+.sidebar .widget li{margin-bottom:10px;color:#555;}
+.sidebar .widget a{color:#C9A86A;text-decoration:none;}
+.sidebar .widget a:hover{text-decoration:underline;}
+.sidebar .widget p{font-size:14px;color:#666;}
+.cta-section{background:#0B1F3A;color:#fff;padding:60px 20px;text-align:center;}
+.cta-section h2{margin-bottom:15px;font-size:32px;}
+.cta-section p{margin-bottom:30px;opacity:0.9;}
+.btn{background:#C9A86A;color:#fff;padding:14px 30px;text-decoration:none;border-radius:5px;display:inline-block;font-weight:bold;font-size:16px;}
+.btn:hover{background:#b8965a;}
+.footer{background:#0B1F3A;color:#fff;text-align:center;padding:40px 20px;margin-top:0;}
+.footer p{margin:5px 0;opacity:0.8;font-size:14px;}
+.footer a{color:#C9A86A;text-decoration:none;}
+@media (max-width:768px){
+.content-layout{grid-template-columns:1fr;padding:40px 15px;}
+.article-header h1{font-size:26px;}
+.author-box{flex-direction:column;text-align:center;}
+.nav-links{gap:15px;}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mixed Container vs Full Container: Multi-Category Orders from One Factory",
+  "description": "How to plan a mixed container across ceramics, glass and acrylic — volume maths, category limits and the paperwork that keeps one shipment from holding up the rest.",
+  "image": "https://www.kjadehome.com/images/og-share.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Bonnie Woo",
+    "url": "https://www.linkedin.com/in/bonnie-woo-7b74911b6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "KJadeHome",
+    "logo": {"@type": "ImageObject", "url": "https://www.kjadehome.com/images/logo.png"}
+  },
+  "datePublished": "October 4, 2026",
+  "dateModified": "October 4, 2026",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.kjadehome.com/blog/mixed-container-shipping-guide.html"
+  }
+}
+</script>
+<link rel="canonical" href="https://www.kjadehome.com/blog/mixed-container-shipping-guide.html">
+<!-- align-seo:social -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mixed Container vs Full Container: Multi-Category Orders from One Factory | KJadeHome">
+<meta name="twitter:description" content="How to plan a mixed container across ceramics, glass and acrylic — volume maths, category limits and the paperwork that keeps one shipment from holding up the rest.">>
+<meta name="twitter:image" content="https://www.kjadehome.com/images/og-share.jpg">
+<!-- align-seo:ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XM8EP6HP5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1XM8EP6HP5');
+</script>
+<!-- align-seo:social -->
+<meta property="og:site_name" content="KJadeHome">
+<meta property="og:locale" content="en_US">
+</head>
+
+<body>
+<!-- ========== 导航栏 - 站点统一组件 ========== -->
+<nav style="background:#0B1F3A;padding:0 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+  <div style="max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+    <div style="font-size:20px;font-weight:bold;">
+      <a href="../index.html" style="color:#C9A86A;text-decoration:none;">KJadeHome</a>
+    </div>
+    <div style="display:flex;gap:30px;flex-wrap:wrap;">
+      <a href="../index.html" style="color:#fff;padding:18px 0;font-size:15px;display:block;;text-decoration:none;">Home</a>
+      <a href="../products.html" style="color:#fff;padding:18px 0;font-size:15px;display:block;;text-decoration:none;">Products</a>
+      <a href="../about.html" style="color:#fff;padding:18px 0;font-size:15px;display:block;;text-decoration:none;">About</a>
+      <a href="../index.html" style="color:#C9A86A;padding:18px 0;font-size:15px;display:block;font-weight:bold;border-bottom:2px solid #C9A86A;;text-decoration:none;">Blog</a>
+      <a href="../inquiry.html" style="color:#fff;padding:18px 0;font-size:15px;display:block;;text-decoration:none;">Get Quote</a>
+    </div>
+  </div>
+</nav>
+<!-- ========== 导航栏结束 ========== -->
+
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><a href="https://www.kjadehome.com">KJadeHome</a></div>
+    <div class="nav-links">
+      <a href="https://www.kjadehome.com">Home</a>
+      <a href="https://www.kjadehome.com/products.html">Products</a>
+      <a href="https://www.kjadehome.com/about.html">About</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="https://www.kjadehome.com/inquiry.html">Get Quote</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-header">
+  <span class="article-category">Logistics</span>
+  <h1>Mixed Container vs Full Container: Multi-Category Orders from One Factory</h1>
+  <div class="article-meta">
+    <span>By Bonnie Woo</span>
+    <span>October 4, 2026</span>
+    <span>7 min read</span>
+  </div>
+</div>
+
+<div class="content-layout">
+  <article class="article-content">
+<p>An importer with three product lines does not have three problems, they have one problem: three separate minimum container loads. Consolidating them into a single mixed shipment changes the freight maths, the production planning and the risk profile of the order — usually in the importer's favour, but only if the category limits are understood first.</p>
+
+<h2 id="volume">Start With Volume, Not With SKUs</h2>
+<p>Container economics are driven by <strong>cubic metres</strong>, not by units or by weight. The practical sequence:</p>
+<ol>
+  <li>Convert each SKU to packed cubic metres per case, including the divider and the carton wall.</li>
+  <li>Multiply by your planned quantity.</li>
+  <li>Sort the running total into categories that share a factory process.</li>
+  <li>Check the remainder against a minimum economical line-haul, not against zero.</li>
+</ol>
+<p>Doing this in SKU order instead of volume order is why most mixed shipments end up 60–70% full: the last few SKUs quietly consume the remaining space.</p>
+
+<h2 id="limits">Category Limits: What Cannot Be Merged</h2>
+<p>Some combinations are routine and some are restricted. The ones that bite in practice:</p>
+<ul>
+  <li><strong>Firing temperature compatibility</strong> — a glaze and a body that must share a kiln run is a scheduling constraint, not a hard limit; incompatible glazes simply need separate fires, which is why mixed ceramic orders sometimes quote as two production windows.</li>
+  <li><strong>Food-contact documentation per material</strong> — ceramic, glass and each acrylic compound each need their own compliance file. They can travel together; they cannot share a certificate.</li>
+  <li><strong>Soft plastics and food-contact acrylic</strong> — packing and labelling requirements differ from ceramics and glass, and customs often wants them listed separately.</li>
+  <li><strong>Weight class</strong> — dense stoneware and light acrylic have very different case weights; over-weight cartons fail a retail distribution check even when the volume fits.</li>
+</ul>
+<p>Our <a href="https://www.kjadehome.com/acrylic-spice-jar-manufacturer.html">acrylic spice jar</a> and <a href="https://www.kjadehome.com/acrylic-kitchen-organiser.html">kitchen organiser</a> ranges typically sit in a different weight and documentation class from <a href="https://www.kjadehome.com/ceramic-mug-manufacturer.html">ceramic mugs</a> and <a href="https://www.kjadehome.com/stoneware-tableware-manufacturer.html">stoneware tableware</a> — that is normal and is handled at booking, not at loading.</p>
+
+<h2 id="cost">Where the Savings Actually Come From</h2>
+<p>A mixed container wins on three lines, and only one of them is freight:</p>
+<ul>
+  <li><strong>Freight per unit</strong> — one line-haul across all categories instead of three.</li>
+  <li><strong>Handling</strong> — one booking, one loading dock, one set of documents.</li>
+  <li><strong>Cash cycle</strong> — one payment event instead of three staggered ones, which is frequently larger in absolute terms than the freight saving.</li>
+</ul>
+<p>What it does <em>not</em> save automatically is unit price. Consolidating does not lower the factory's per-unit cost; the per-unit price is set by quantity within each category. Do not expect a volume discount for mixing — expect a freight and administrative saving.</p>
+
+<h2 id="risk">The One Real Risk: One Delay Blocks Everything</h2>
+<p>In a single-category shipment a problem costs you one category. In a mixed shipment the same problem delays the whole vessel, because the container leaves once, not once per SKU. That means:</p>
+<blockquote><p>Mixed containers raise the cost of a late category. It is worth confirming lead-time <em>per category</em> before booking, not after.</p></blockquote>
+<p>The mitigation is sequencing: schedule the category with the longest lead time first, and treat the others as fill. If two categories on the same container have materially different lead times, that alone justifies confirming them with the factory before you commit to a ship date.</p>
+
+<h2 id="paperwork">Paperwork for a Mixed Shipment</h2>
+<p>Keep the commercial documents consolidated and the compliance documents separate:</p>
+<ul>
+  <li><strong>One</strong> commercial invoice and packing list, with quantities split by category.</li>
+  <li><strong>Separate</strong> food-contact and material declarations per material.</li>
+  <li><strong>One</strong> certificate of origin, provided the shipment qualifies as originating.</li>
+  <li><strong>Case marks</strong> that identify category, so a unit-level recall is not a shipment-level recall.</li>
+  <li><strong>Photos</strong> of the loaded container before sealing — cheapest protection available if a dispute later touches the loading.</li>
+</ul>
+
+<h2 id="plan">A Workable Sequence</h2>
+<ol>
+  <li>Fix quantities per category from volume maths, not from a wish list.</li>
+  <li>Confirm lead time per category with the factory and sequence longest-first.</li>
+  <li>Confirm compliance files exist for every material in the shipment.</li>
+  <li>Book the container against the <em>longest</em> category, not the average.</li>
+  <li>Photograph loading, then seal.</li>
+</ol>
+<p>Because our programmes share a 500 pc MOQ and a 30–45 day production window across <a href="https://www.kjadehome.com/ceramic-decor.html">ceramics</a>, <a href="https://www.kjadehome.com/glass-decor.html">glassware</a> and <a href="https://www.kjadehome.com/kitchen-storage.html">kitchen storage</a>, most mixed orders can be planned as a single schedule rather than three. Ask for the per-category lead time before you book — that is the number that decides whether the plan holds.</p>
+
+<h2 id="faq">Frequently Asked</h2>
+<h3>Is a mixed container always cheaper?</h3>
+<p>For freight and handling, yes. It does not reduce per-unit factory pricing, and it increases the cost of any single category running late.</p>
+<h3>Can ceramics, glass and acrylic ship in one container?</h3>
+<p>Yes, subject to separate compliance documentation per material and to case-weight suitability for your destination's distribution handling.</p>
+<h3>What MOQ applies to a mixed order?</h3>
+<p>The 500 pc MOQ applies per category, not to the container total. Three categories at 500 pc each is a valid mixed shipment.</p>
+</article>
+
+  <aside class="sidebar">
+    <div class="widget">
+      <h3>Table of Contents</h3>
+<ul>
+        <li><a href="#volume">Start With Volume</a></li>
+        <li><a href="#limits">Category Limits</a></li>
+        <li><a href="#cost">Where the Savings Come From</a></li>
+        <li><a href="#risk">The One Real Risk</a></li>
+        <li><a href="#paperwork">Paperwork</a></li>
+        <li><a href="#plan">A Workable Sequence</a></li>
+</ul></ul>
+    </div>
+
+    <div class="widget">
+      <h3>Popular Articles</h3>
+      <ul>
+        <li><a href="../how-to-choose-oem-manufacturer.html">How to Choose an OEM Manufacturer</a></li>
+        <li><a href="bsci-certification-guide.html">BSCI Certification Guide</a></li>
+        <li><a href="ceramic-mug-moq-guide.html">Ceramic Vases: MOQ & Pricing Guide</a></li>
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3>Need a Quote?</h3>
+      <p>Flexible MOQ from 500pcs. BSCI certified factory.</p>
+      <a href="https://www.kjadehome.com/inquiry.html" class="btn" style="display:block;text-align:center;">Get Wholesale Quote</a>
+    </div>
+  </aside>
+
+</div>
+
+<div class="related">
+  <div class="related-inner">
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <h4>Mixed Container vs Full Container</h4>
+        <p>Volume maths, category limits and the paperwork that keeps one shipment on schedule.</p>
+        <a href="mixed-container-shipping-guide.html">Read More →</a>
+      </div>
+      <div class="related-card">
+        <h4>Double-Wall Glass Tumblers: Specification Guide</h4>
+        <p>Packaging is part of the container maths — specify it early.</p>
+        <a href="double-wall-glass-buying-guide.html">Read More →</a>
+      </div>
+      <div class="related-card">
+        <h4>FDA &amp; Prop 65 Compliance for Drinkware</h4>
+        <p>Each material needs its own file, even in one container.</p>
+        <a href="fda-prop65-drinkware-compliance.html">Read More →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Ready to Source Smarter?</h2>
+  <p>Get wholesale pricing and catalog within 24 hours. No commitment required.</p>
+  <a href="https://www.kjadehome.com/inquiry.html" class="btn">Get My Quote</a>
+</div>
+
+<div class="footer">
+  <p><strong>KJadeHome</strong> — OEM Manufacturer Since 2014</p>
+  <p>Ceramic Mugs | Glassware | Kitchen Storage | BSCI Audited</p>
+  <p>📧 <a href="mailto:info@kjadehome.com">info@kjadehome.com</a> | 🌐 <a href="https://www.kjadehome.com">www.kjadehome.com</a></p>
+  <p style="margin-top:15px;font-size:12px;">© 2026 KJadeHome. All rights reserved.</p>
+<p>Multi-category China sourcing by <a href="https://www.masadvp.com">MASA Development International</a> &mdash; toy, home textile, pet and lifestyle products.</p>
+</div>
+
+
+<script src="../float-buttons.js"></script>
+</body>
+</html>
