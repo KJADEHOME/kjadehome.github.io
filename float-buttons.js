@@ -4,7 +4,7 @@
 
    === CONFIG ===
    Edit WHATSAPP and WECHAT_ID below for your site.
-   - WHATSAPP: bare number with country code, no "+" or spaces (e.g. 8615263130999)
+   - WHATSAPP: bare number with country code, no "+" or spaces (e.g. 8613817895298)
    - WECHAT_ID: your WeChat ID
    - PRESET_MSG: URL-encoded prefilled inquiry text for WhatsApp
 */
@@ -12,7 +12,7 @@
   if (document.getElementById('b2b-float-root')) return; // idempotent guard
 
   // ---- EDIT THIS ----
-  var WHATSAPP   = '8615263130999';
+  var WHATSAPP   = '8613817895298';
   var WECHAT_ID  = '15263130999';
   var PRESET_MSG = encodeURIComponent("Hi, I'd like to discuss OEM/ODM cooperation for my brand. Could you share your catalog and a quote?");
   // -------------------
